@@ -1,0 +1,21 @@
+{
+	"folders": [
+		{
+			"name": "Yat Netcore Vue App",
+			"path": "../yat-netcore-vue-app"
+		}
+	],
+	"settings": {
+		"files.exclude": {
+			"**/.git": true,
+			"**/.svn": true,
+			"**/.hg": true,
+			"**/CVS": true,
+			"**/.DS_Store": true,
+			// custom exclusions
+			"**/.vscode": true,
+			"**/bin": true,
+			"**/obj": true	
+		}
+	}
+}
