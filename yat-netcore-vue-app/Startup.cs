@@ -43,6 +43,8 @@ namespace YatVueApp
             if (!env.IsDevelopment())
                 app.UseHttpsRedirection();
             
+            app.UseCors("VueCorsPolicy");
+            
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
 
