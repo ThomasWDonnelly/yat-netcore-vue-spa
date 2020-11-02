@@ -8,14 +8,24 @@ namespace YatVueApp.Repository
     public class RepositoryWrapper : IRepositoryWrapper
     {
         private RepositoryContext _repository;
-        // TODO: declare repository interfaces here
+        private IProductRepository _product;
 
         public RepositoryWrapper(RepositoryContext repository)
         {
             _repository = repository;
         }
 
-        // TODO: implement repository interfaces here
+        public IProductRepository Product
+        {
+            get
+            {
+                if (_product == null)
+                {
+                    _product = new ProductRepository(_repository);
+                }
+                return _product;
+            }
+        }
 
         public void Save()
         {

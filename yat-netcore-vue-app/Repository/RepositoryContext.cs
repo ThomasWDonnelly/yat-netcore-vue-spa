@@ -13,7 +13,7 @@ namespace YatVueApp.Repository
          : base(options)
         {}
 
-        //TODO: add model dbsets here
+        public DbSet<Product> Products { get; set; }
         public DbSet<WeatherForecast> Forecasts { get; set; }
     }
 }

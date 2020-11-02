@@ -12,7 +12,7 @@ namespace YatVueApp.Utilities
     {
         public MappingProfile()
         {
-            //TODO: declare and define mapping profiles here
+            CreateMap<Product, ProductDto>();
         }
     }
 }
