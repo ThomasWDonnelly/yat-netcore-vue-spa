@@ -1,5 +1,5 @@
 # yat-netcore-vue-app
-Yet another Vue.js sample project
+Yet another Vue.js sample project using .Net Core 3.1
 
 ## Project setup
 ```
