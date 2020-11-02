@@ -1,6 +1,10 @@
 {
 	"folders": [
 		{
+			"name": "Root",
+			"path": "../"
+		},
+		{
 			"name": "Yat Netcore Vue App",
 			"path": "../yat-netcore-vue-app"
 		}
@@ -14,8 +18,10 @@
 			"**/.DS_Store": true,
 			// custom exclusions
 			"**/.vscode": true,
-			"**/bin": true,
-			"**/obj": true	
+			"**/bin": false,
+			"**/obj": true,
+			"**/node_modules": true,
+			"**/*.csproj": true
 		}
 	}
 }
