@@ -14,6 +14,5 @@ namespace YatVueApp.Repository
         {}
 
         public DbSet<Product> Products { get; set; }
-        public DbSet<WeatherForecast> Forecasts { get; set; }
     }
 }
