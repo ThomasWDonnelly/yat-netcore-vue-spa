@@ -36,7 +36,7 @@ namespace YatVueApp.Utilities
 
         public static void ConfigureMySqlContext(this IServiceCollection services, IConfiguration config)
         {
-            var connectionString = config["DefaultMySqlConnection"];
+            var connectionString = config["ConnectionStrings:DefaultMySqlConnection"];
             services.AddDbContext<RepositoryContext>(o =>
                 o.UseMySql(connectionString));
         }
