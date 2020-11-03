@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-using YatVueApp.Model;
+using YatVueApp.Models;
 using YatVueApp.Contracts;
 using YatVueApp.Repository;
 
@@ -20,7 +20,6 @@ namespace YatVueApp.Controllers
         private readonly ILogger<ProductController> _logger;
         private readonly IMapper _mapper;
         private readonly IRepositoryWrapper _repository;
-        //private readonly IProductRepository _repository;
         
         public ProductController(IRepositoryWrapper repository, ILogger<ProductController> logger, IMapper mapper)
         {
@@ -28,14 +27,6 @@ namespace YatVueApp.Controllers
             _logger = logger;            
             _mapper = mapper;
         }
-
-        // public ProductController(IProductRepository repository, ILogger<ProductController> logger, IMapper mapper)
-        // {
-        //     _repository = repository;
-        //     _logger = logger;            
-        //     _mapper = mapper;
-        // }
-        
         
         // GET: api/product
         // Retrieves all 'Products' currently in the data store
@@ -53,12 +44,5 @@ namespace YatVueApp.Controllers
                 return StatusCode(500, "Internal server error, Message: " + exception.Message);
             }
         }
-
-        // // GET: api/product
-        // [HttpGet]
-        // public IEnumerable<Product> GetAllProducts()
-        // {
-        //     return _repository.Product.GetAllProducts();
-        // }
     }
 }

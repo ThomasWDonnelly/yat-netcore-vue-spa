@@ -2,7 +2,7 @@ using System;
 using System.Linq;
 using System.Linq.Expressions;
 
-namespace YatVueApp.Repository
+namespace YatVueApp.Contracts
 {
     public interface IRepositoryBase<T>
     {

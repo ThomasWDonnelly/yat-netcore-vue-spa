@@ -11,7 +11,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using VueCliMiddleware;
 using YatVueApp.Repository;
-using YatVueApp.Utilities;
+using YatVueApp.Extensions;
 
 namespace YatVueApp
 {
@@ -54,16 +54,14 @@ namespace YatVueApp
             }
             else
                 app.UseDeveloperExceptionPage();
-            
-            //app.UseStaticFiles();
             app.UseCors("VueCorsPolicy");
             app.UseForwardedHeaders(new ForwardedHeadersOptions
             {
                 ForwardedHeaders = ForwardedHeaders.All
             });
+            
             app.UseRouting();
             app.UseAuthorization();
-
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(

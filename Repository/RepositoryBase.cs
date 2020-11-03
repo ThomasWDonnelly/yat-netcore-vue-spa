@@ -2,6 +2,7 @@ using System;
 using System.Linq;
 using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore;
+using YatVueApp.Contracts;
 
 namespace YatVueApp.Repository
 {

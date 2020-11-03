@@ -6,9 +6,10 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using YatVueApp.Contracts;
 using YatVueApp.Repository;
 
-namespace YatVueApp.Utilities
+namespace YatVueApp.Extensions
 {
     public static class ConfigurationExtensions
     {

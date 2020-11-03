@@ -2,7 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using YatVueApp.Model;
+using YatVueApp.Contracts;
+using YatVueApp.Models;
 
 namespace YatVueApp.Repository
 {

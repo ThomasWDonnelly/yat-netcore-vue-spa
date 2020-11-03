@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using YatVueApp.Model;
+using YatVueApp.Models;
 
-namespace YatVueApp.Repository
+namespace YatVueApp.Contracts
 {
     public interface IProductRepository : IRepositoryBase<Product>
     {

@@ -5,8 +5,8 @@
 			"path": "../"
 		},
 		{
-			"name": "Yat Netcore Vue App",
-			"path": "../yat-netcore-vue-app"
+			"name": "Yat Vue App",
+			"path": "../ClientApp"
 		}
 	],
 	"settings": {
@@ -16,12 +16,16 @@
 			"**/.hg": true,
 			"**/CVS": true,
 			"**/.DS_Store": true,
+			
 			// custom exclusions
 			"**/.vscode": true,
 			"**/bin": false,
 			"**/obj": true,
 			"**/node_modules": true,
-			"**/*.csproj": true
+			"**/*.csproj": true,
+
+			// temporary exclusions
+			"**/*.7z": true
 		}
 	}
 }
