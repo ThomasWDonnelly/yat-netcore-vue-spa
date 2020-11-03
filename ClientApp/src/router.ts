@@ -14,17 +14,14 @@ export default new Router({
       component: Home,
     },
     {
-      path: '/counter',
-      name: 'counter',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "counter" */ './views/Counter.vue'),
+      path: '/fetch-forecast-data',
+      name: 'fetch-forecast-data',
+      component: () => import(/* webpackChunkName: "fetch-forecast-data" */ './views/forecast/FetchForecastData.vue'),
     },
     {
-      path: '/fetch-data',
-      name: 'fetch-data',
-      component: () => import(/* webpackChunkName: "fetch-data" */ './views/FetchData.vue'),
+      path: '/fetch-product-data',
+      name: 'fetch-product-data',
+      component: () => import(/* webpackChunkName: "fetch-product-data" */'./views/product/FetchProductData.vue'),
     },
   ],
 });

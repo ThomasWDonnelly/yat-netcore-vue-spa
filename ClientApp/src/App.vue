@@ -16,9 +16,6 @@
 
     <v-app-bar app :clipped-left="clipped" color="info" dark>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-      <v-btn class="d-none d-lg-flex" icon @click.stop="miniVariant = !miniVariant">
-        <v-icon v-html="miniVariant ? 'chevron_right' : 'chevron_left'"></v-icon>
-      </v-btn>
       <v-btn class="d-none d-lg-flex" icon @click.stop="clipped = !clipped">
         <v-icon>web</v-icon>
       </v-btn>
@@ -38,8 +35,8 @@
 </template>
 
 <script lang="ts">
-import HelloWorld from '@/components/HelloWorld.vue';
 import { Component, Vue } from 'vue-property-decorator';
+import HelloWorld from './components/HelloWorld.vue';
 
 @Component({
   components: { HelloWorld },
@@ -50,11 +47,11 @@ export default class App extends Vue {
   private drawer: boolean = true;
   private miniVariant: boolean = false;
   private right: boolean = true;
-  private title: string = 'ASP.NET Core Vue Starter';
+  private title: string = 'YAT NetCore App';
   private items = [
     { title: 'Home', icon: 'home', link: '/' },
-    { title: 'Counter', icon: 'touch_app', link: '/counter' },
-    { title: 'Fetch data', icon: 'get_app', link: '/fetch-data' },
+    { title: 'Products', icon: 'get_app', link: '/fetch-product-data' },
+    { title: 'Forecast', icon: 'get_app', link: '/fetch-forecast-data' },
   ];
 }
 </script>

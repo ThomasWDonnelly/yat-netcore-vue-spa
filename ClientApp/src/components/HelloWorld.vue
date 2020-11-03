@@ -4,7 +4,7 @@
       &#8220;{{ quote }}&#8221;
       <footer>
         <small>
-          <em>&mdash;{{ author }}</em>
+          <em><p class="text-center">&mdash;{{ author }}</p></em>
         </small>
       </footer>
     </blockquote>    

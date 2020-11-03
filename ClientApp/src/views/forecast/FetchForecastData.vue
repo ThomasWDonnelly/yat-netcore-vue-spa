@@ -31,12 +31,12 @@
 
     <v-alert :value="showError" type="warning">
       Are you sure you're using ASP.NET Core endpoint? (default at
-      <a href="http://localhost:5000/fetch-data">http://localhost:5000</a
+      <a href="http://localhost:5000/fetch-forecast-data">http://localhost:5000</a
       >)
       <br />
       API call would fail with status code 404 when calling from Vue app
       (default at
-      <a href="http://localhost:8080/fetch-data">http://localhost:8080</a>)
+      <a href="http://localhost:8080/fetch-forecast-data">http://localhost:8080</a>)
       without devServer proxy settings in vue.config.js file.
     </v-alert>
   </v-container>
@@ -45,7 +45,7 @@
 <script lang="ts">
 // an example of a Vue Typescript component using Vue.extend
 import Vue from 'vue';
-import { Forecast } from '../models/Forecast';
+import { Forecast } from '../../models/Forecast';
 
 export default Vue.extend({
   data() {
@@ -72,7 +72,7 @@ export default Vue.extend({
         return 'red';
       }
     },
-    async fetchWeatherForecasts() {
+    async fetchWeatherForecast() {
       try {
         const response = await this.$axios.get<Forecast[]>('api/WeatherForecast');
         this.forecasts = response.data;
@@ -84,7 +84,7 @@ export default Vue.extend({
     },
   },
   async created() {
-    await this.fetchWeatherForecasts();
+    await this.fetchWeatherForecast();
   },
 });
 </script>

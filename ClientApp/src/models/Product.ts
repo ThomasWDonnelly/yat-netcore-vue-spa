@@ -5,6 +5,6 @@ export class Product {
         public description: string,
         public price: number,
         public createdBy: string,
-        public createdOn: Date,
+        public createdOn: string,
     ) {}
 }

@@ -2,13 +2,13 @@
   <v-container fluid>
     <v-layout column align-center>
       <img src="@/assets/logo.png" alt="Vuetify.js" class="mb-5">
-      <HelloWorld quote="Welcome to Your ASP.NET Core + Vue.js + TypeScript App" author="brought to you by Software Ateliers" />
+      <HelloWorld quote="Welcome to my ASP.NET Core + Vue.js + TypeScript App" author="Thomas W. Donnelly" />
     </v-layout>
     <v-slide-y-transition mode="out-in">
       <v-row>        
         <v-col>
           <h1 class="headline">Hello, world!</h1>
-          <p>Welcome to your new single-page application, built with: </p>
+          <p>Welcome to my new single-page application, built with: </p>
           <ul>
             <li>
               <a href="https://get.asp.net" target="_blank"> ASP.NET Core</a> and
@@ -21,19 +21,6 @@
               <a href="https://webpack.js.org" target="_blank">Webpack</a> internally used by Vue CLI</li>
             <li>
               <a href="https://vuetifyjs.com" target="_blank">Vuetify</a> for layout and styling</li>
-          </ul>
-
-          <h3 class="headline mt-5">To help you get started, we've also set up:</h3>
-          <ul>
-            <li>
-              <strong>Client-side navigation</strong>. For example, click <em>Counter</em> then <em>Back</em> to return here.</li>
-            <li>
-              <strong>Development server integration</strong>. In development mode, the development server from
-              <code>vue-cli-service</code> runs in the background automatically, so your client-side resources are dynamically built on 
-              demand and the page refreshes when you modify any file.</li>
-            <li>
-              <strong>Efficient production builds</strong>. In production mode, development-time features are disabled, and the
-              <code>webpack</code> build tool produces minified static CSS and JavaScript files.</li>
           </ul>
 
           <h3 class="headline mt-5">Integrated Vue plugins:</h3>
@@ -62,7 +49,7 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
+import HelloWorld from '@/components/HelloWorld.vue';
 
 @Component({
   components: {

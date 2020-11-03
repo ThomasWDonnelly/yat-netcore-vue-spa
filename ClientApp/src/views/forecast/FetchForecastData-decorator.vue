@@ -37,8 +37,8 @@
       :value="showError"
       type="warning"
     >
-      Are you sure you're using ASP.NET Core endpoint? (default at <a href="http://localhost:5000/fetch-data">http://localhost:5000</a>)<br>
-      API call would fail with status code 404 when calling from Vue app (default at <a href="http://localhost:8080/fetch-data">http://localhost:8080</a>) without devServer proxy settings in vue.config.js file.
+      Are you sure you're using ASP.NET Core endpoint? (default at <a href="http://localhost:5000/fetch-forecast-data">http://localhost:5000</a>)<br>
+      API call would fail with status code 404 when calling from Vue app (default at <a href="http://localhost:8080/fetch-forecast-data">http://localhost:8080</a>) without devServer proxy settings in vue.config.js file.
     </v-alert>   
        
   </v-container>
@@ -47,10 +47,10 @@
 <script lang="ts">
 // an example of a Vue Typescript component using vue-property-decorator
 import { Component, Vue } from 'vue-property-decorator';
-import { Forecast } from '../models/Forecast';
+import { Forecast } from '../../models/Forecast';
 
 @Component({})
-export default class FetchDataView extends Vue {
+export default class FetchForecastDataView extends Vue {
   private loading: boolean = true;
   private showError: boolean = false;
   private errorMessage: string = 'Error while loading weather forecast.';
@@ -72,10 +72,10 @@ export default class FetchDataView extends Vue {
     }
   }
   private async created() {
-    await this.fetchWeatherForecasts();
+    await this.fetchWeatherForecast();
   }
 
-  private async fetchWeatherForecasts() {
+  private async fetchWeatherForecast() {
     try {
       const response = await this.$axios.get<Forecast[]>('api/WeatherForecast');
       this.forecasts = response.data;
