@@ -1,5 +1,4 @@
-# yat-netcore-vue-app
-Yet another Vue.js sample project using .Net Core 3.1
+# ASP.NET Core Vue Starter
 
 ## Project setup
 ```
@@ -20,6 +19,3 @@ npm run build
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
