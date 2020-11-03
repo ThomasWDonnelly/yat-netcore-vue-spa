@@ -7,8 +7,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-using YatVueApp.Models;
 using YatVueApp.Contracts;
+using YatVueApp.Models;
 using YatVueApp.Repository;
 
 namespace YatVueApp.Controllers
