@@ -25,19 +25,19 @@ namespace Yat.NetCore31.Spa.Extensions
 
         public static void ConfigureIISIntegration(this IServiceCollection services)
         {
-            // TODO: Implement ConfigureIISIntegration()
+            // TODO: implement ConfigureIISIntegration()
             throw new NotImplementedException("This helper method is not implemented");
         }
 
         public static void ConfigureRepositoryWrapper(this IServiceCollection services)
         {
-            // TODO: Implement ConfigureRepositoryWrapper()
+            // TODO: implement ConfigureRepositoryWrapper()
             throw new NotImplementedException("This helper method is not implemented");
         }
 
         public static void ConfigureMySqlContext(this IServiceCollection services, IConfiguration config)
         {
-            // TODO: Implement ConfigureMySqlContext()
+            // TODO: implement ConfigureMySqlContext()
             throw new NotImplementedException("This helper method is not implemented");
         }
     }
