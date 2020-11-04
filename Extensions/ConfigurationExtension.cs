@@ -1,0 +1,44 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+
+namespace Yat.NetCore31.Spa.Extensions
+{
+    public static class ConfigurationExtensions
+    {
+        public static void ConfigureCors(this IServiceCollection services)
+        {
+            services.AddCors(options =>
+                {
+                    options.AddPolicy("VueCorsPolicy", builder =>
+                        builder.AllowAnyHeader()
+                               .AllowAnyMethod()
+                               .AllowCredentials()
+                               .WithOrigins("http://localhost:8080"));
+                });
+        }
+
+        public static void ConfigureIISIntegration(this IServiceCollection services)
+        {
+            // TODO: Implement ConfigureIISIntegration()
+            throw new NotImplementedException("This helper method is not implemented");
+        }
+
+        public static void ConfigureRepositoryWrapper(this IServiceCollection services)
+        {
+            // TODO: Implement ConfigureRepositoryWrapper()
+            throw new NotImplementedException("This helper method is not implemented");
+        }
+
+        public static void ConfigureMySqlContext(this IServiceCollection services, IConfiguration config)
+        {
+            // TODO: Implement ConfigureMySqlContext()
+            throw new NotImplementedException("This helper method is not implemented");
+        }
+    }
+}
