@@ -1,11 +1,9 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Yat.NetCore31.Spa.Contracts;
+using Yat.NetCore31.Spa.Repository;
 
 namespace Yat.NetCore31.Spa.Extensions
 {
