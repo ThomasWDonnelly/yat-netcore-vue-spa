@@ -5,6 +5,7 @@ namespace Yat.NetCore31.Spa.Models
 {
     public class WeatherForecast
     {
+        [Key]
         public DateTime Date { get; set; }
 
         public int TemperatureC { get; set; }

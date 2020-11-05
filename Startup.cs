@@ -20,9 +20,13 @@ namespace Yat.NetCore31.Spa
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.ConfigureCors();
+            services.ConfigureIISIntegration();
+            services.ConfigureMySqlContext(Configuration);
+            services.ConfigureRepositoryWrapper();
 
-            services.AddControllersWithViews();
-
+            services.AddControllers();
+            services.AddAutoMapper(typeof(Startup));
             services.AddSpaStaticFiles(configuration =>
             {
                 configuration.RootPath = "ClientApp/dist";
@@ -39,11 +43,9 @@ namespace Yat.NetCore31.Spa
                 app.UseHsts();
                 app.UseHttpsRedirection();
             }
-                
-            app.UseCors("VueCorsPolicy");
 
             app.UseSpaStaticFiles();
-            
+
             app.UseRouting();
             app.UseEndpoints(endpoints =>
             {

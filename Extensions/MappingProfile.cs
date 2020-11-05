@@ -8,7 +8,8 @@ namespace Yat.NetCore31.Spa.Extensions
     {
         public MappingProfile()
         {
-            // TODO: declare and define mapping profiles here
+			// AutoMapper mapping profiles
+			CreateMap<Product, ProductDto>();
         }
     }
 }
